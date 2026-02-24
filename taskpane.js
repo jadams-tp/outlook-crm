@@ -19,7 +19,7 @@ Office.onReady(() => {
 
       const payload = { subject, fromName, fromEmail, bodyHtml };
 
-      const resp = await fetch("MAKE_WEBHOOK_URL", {
+      const resp = await fetch("https://hook.us2.make.com/t5ed226d56xrg3scp37e5h7l2fn7y8b6", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
@@ -32,4 +32,5 @@ Office.onReady(() => {
       status.textContent = "❌ Error: " + (e?.message || e);
     }
   };
+
 });
